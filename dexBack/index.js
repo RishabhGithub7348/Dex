@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/tokenPrice", async (req, res) => {
+
   const {query} = req;
 
   const responseOne = await Moralis.EvmApi.token.getTokenPrice({
